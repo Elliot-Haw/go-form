@@ -24,7 +24,7 @@ import (
 */
 func main() {
     a := app.New()
-    w := a.NewWindow("My App")
+    w := a.NewWindow("GO Form")
 
     w.SetContent(container.NewVBox(
         widget.NewLabel("Hello, World!"),
