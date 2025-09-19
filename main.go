@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+       	"fmt"
+	"fyne.io/fyne/v2/app"
+	"fyne.io/fyne/v2/container"
+	"fyne.io/fyne/v2/widget"
+)
 
 /*This is the first set of comments just briefly organizing what should go on in this application
 
@@ -18,8 +23,18 @@ import "fmt"
 12. Connect to postgres to store the data and the form types, train the AI based on the form encryption
 13. Use Go for frontent, use Python for ML
 */
+func main() {
+    a := app.New()
+    w := a.NewWindow("My App")
 
-func main(){
-	fmt.Println("Hello, world")
-	fmt.Println("This is a second test")
+    w.SetContent(container.NewVBox(
+        widget.NewLabel("Hello, World!"),
+        widget.NewButton("Click me", func() {
+            println("Button clicked!")
+        }),
+    ))
+
+    w.ShowAndRun()
 }
+
+
