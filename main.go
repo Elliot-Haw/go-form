@@ -16,7 +16,7 @@ import "fmt"
 10. The AI then reads this, processes the form and explains if any fields are missing, if any data is incorrect, or if it requires human review.
 11. The AI will be deepseek running locally
 12. Connect to postgres to store the data and the form types, train the AI based on the form encryption
-13. Use React for frontent, use Python for ML
+13. Use Go for frontent, use Python for ML
 */
 
 func main(){
