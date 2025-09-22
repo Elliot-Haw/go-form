@@ -25,14 +25,13 @@ import (
 func main() {
     a := app.New()
     w := a.NewWindow("GO Form")
-
+    w.Resize(fyne.NewSize(300,300))
     w.SetContent(container.NewVBox(
         widget.NewLabel("Hello, World!"),
         widget.NewButton("Click me", func() {
             println("Button clicked!")
         }),
     ))
-
     w.ShowAndRun()
 }
 
