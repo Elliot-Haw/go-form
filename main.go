@@ -5,6 +5,7 @@ import (
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
+	"container/list"
 )
 
 /*This is the first set of comments just briefly organizing what should go on in this application
@@ -23,12 +24,20 @@ import (
 12. Connect to postgres to store the data and the form types, train the AI based on the form encryption
 13. Use Go for frontent, use Python for ML
 */
+
+type Struct Form {
+	Title string,
+	Lines number
+}
+//loop through lsit tiems to display buttons 
 func main() {
+	forms := list.New()
     a := app.New()
     w := a.NewWindow("GO Form")
     w.Resize(fyne.NewSize(900,900))
     w.SetContent(container.NewVBox(
-        widget.NewLabel("Hello, World!"),
+        widget.NewLabel("Select Form")
+	
         widget.NewButton("Click me", func() {
             println("Button clicked!")
         }),
