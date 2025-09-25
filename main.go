@@ -24,23 +24,29 @@ import (
 12. Connect to postgres to store the data and the form types, train the AI based on the form encryption
 13. Use Go for frontent, use Python for ML
 */
-func main() {
-type Struct Form {
+type Form struct {
 	Title string
-	Lines number
+	Lines int
 }
+
+func testPopulateLists(form list){
+
+
+
+}
+func main() {
 	forms := list.New()
-    a := app.New()
-    w := a.NewWindow("GO Form")
-    w.Resize(fyne.NewSize(900,900))
-    w.SetContent(container.NewVBox(
-        widget.NewLabel("Select Form")
-	
-        widget.NewButton("Click me", func() {
-            println("Button clicked!")
-        }),
-    ))
-    w.ShowAndRun()
+	testPopulateLists()
+        a := app.New()
+    	w := a.NewWindow("GO Form")
+    	w.Resize(fyne.NewSize(900,900))
+    	w.SetContent(container.NewVBox(
+	widget.NewLabel("Select Form")
+			widget.NewButton("Click me", func() {
+				println("Button clicked!")
+			}),
+		))
+	w.ShowAndRun()
 }
 
 
