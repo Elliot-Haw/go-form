@@ -10,7 +10,6 @@ import (
 
 /*This is the first set of comments just briefly organizing what should go on in this application
 
-1. Have a functioning UI
 2. Be split into components and functions each with their own tests based on what the best practice for Go is
 3. The user first of all enters the form which gets encrypted
 4. It gets passed to the AI which takes in the form
@@ -35,6 +34,13 @@ form.PushBack(Form{Title: "First Form", Lines: 10})
 form.PushBack(Form{Title: "Second Form", Lines: 10})
 
 }
+
+func OpenExistingForm(form *list.List){
+
+	//logic for opening an existing form
+
+}
+
 func main() {
 	forms := list.New()
 	testPopulateLists(forms)
