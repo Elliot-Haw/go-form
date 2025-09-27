@@ -29,19 +29,20 @@ type Form struct {
 	Lines int
 }
 
-func testPopulateLists(form list){
+func testPopulateLists(form *list.List){
 
-
+form.PushBack(Form{Title: "First Form", Lines: 10})
+form.PushBack(Form{Title: "Second Form", Lines: 10})
 
 }
 func main() {
 	forms := list.New()
-	testPopulateLists()
+	testPopulateLists(forms)
         a := app.New()
     	w := a.NewWindow("GO Form")
     	w.Resize(fyne.NewSize(900,900))
     	w.SetContent(container.NewVBox(
-	widget.NewLabel("Select Form")
+	widget.NewLabel("Select Form"),
 			widget.NewButton("Click me", func() {
 				println("Button clicked!")
 			}),
