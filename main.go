@@ -49,10 +49,9 @@ func main() {
     	w.Resize(fyne.NewSize(900,900))
     	w.SetContent(container.NewVBox(
 	widget.NewLabel("Select Form"),
-			widget.NewButton("Click me", func() {
-				println("Button clicked!")
-			}),
-		))
+        for e := forms.Front(); e != nil; e = e.Next() {
+		widget.NewButton(form.Value.Title ,OpenExistingForm(form.Value)),
+		}))
 	w.ShowAndRun()
 }
 
